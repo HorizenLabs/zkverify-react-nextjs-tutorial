@@ -48,7 +48,7 @@ export default function ZKVProvider({
   }, [setup]);
 
   const handleConnectWallet = useCallback(async () => {
-    const extensions = await web3Enable("Factorization App");
+    const extensions = await web3Enable("zk-verify-nextjs-example");
 
     if (!extensions) {
       throw new Error("No extension found");
