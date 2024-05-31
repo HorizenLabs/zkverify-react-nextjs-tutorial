@@ -1,5 +1,7 @@
 # zkVerify: React and Next.js Example
 
+![app image](/public/nextjs-example-2.png)
+
 Companion repository for the [React and Next.js Example](https://docs.zkverify.io/tutorials/submit-proofs/react-nextjs-example) tutorial from the [zkVerify docs](https://docs.zkverify.io).
 
 > Before running this application, please be sure to complete the [Connecting a Wallet](https://docs.zkverify.io/tutorials/connect-a-wallet/) tutorial, which will set you up with a Substrate compatible wallet and test tokens for the zkVerify testnet.
