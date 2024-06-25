@@ -1,29 +1,27 @@
 "use client";
 
-import { MOCK_BOOJUM_PROOF, MOCK_FFLONK_PROOF } from "@/constants";
+import BoojumProof from "@/components/boojum-proof";
+import FflonkProof from "@/components/fflonk-proof";
+import Groth16Proof from "@/components/groth16-proof";
+import RiscZeroProof from "@/components/risc-zero-proof";
+import { MOCK_FFLONK_PROOF } from "@/constants";
 import { Tab, Tabs } from "@nextui-org/react";
-import dynamic from "next/dynamic";
-const BasicProof = dynamic(() => import("@/components/basic-proof"), {
-  ssr: false,
-});
 
 export default function Home() {
   return (
-    <div className="w-[800px] mx-auto py-8">
+    <div className="py-8">
       <Tabs size="lg" aria-label="Tabs for Proof Types">
-        <Tab key="fflonk" title="Fflonk">
-          <BasicProof
-            mockProof={MOCK_FFLONK_PROOF}
-            pallet="settlementFFlonkPallet"
-            proofType="Fflonk"
-          />
+        <Tab key="groth16" title="Groth16">
+          <Groth16Proof />
+        </Tab>
+        <Tab key="risc" title="Risc Zero">
+          <RiscZeroProof />
+        </Tab>
+        <Tab key="fflonk-cdk" title="Fflonk (Polygon CDK)">
+          <FflonkProof mockProof={MOCK_FFLONK_PROOF} />
         </Tab>
         <Tab key="boojum" title="Boojum">
-          <BasicProof
-            mockProof={MOCK_BOOJUM_PROOF}
-            pallet="settlementZksyncPallet"
-            proofType="Boojum"
-          />
+          <BoojumProof />
         </Tab>
       </Tabs>
     </div>
