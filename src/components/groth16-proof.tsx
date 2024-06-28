@@ -27,7 +27,7 @@ export default function Groth16Proof() {
       <ExtrinsicButton
         pallet="settlementGroth16Pallet"
         extrinsic="submitProof"
-        args={[MOCK_GROTH16_PROOF, GROTH16_VKEY, GROTH16_INPUT]}
+        args={[GROTH16_VKEY, MOCK_GROTH16_PROOF, GROTH16_INPUT]}
       >
         Submit Proof
       </ExtrinsicButton>
