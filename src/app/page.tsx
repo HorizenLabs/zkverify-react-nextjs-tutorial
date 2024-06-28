@@ -14,15 +14,17 @@ export default function Home() {
         <Tab key="groth16" title="Groth16">
           <Groth16Proof />
         </Tab>
+        <Tab key="fflonk-cdk" title="Fflonk">
+          <FflonkProof />
+        </Tab>
+
+        {/* TODO: Fix these based on 0.4 breaking changes
         <Tab key="risc" title="Risc Zero">
           <RiscZeroProof />
         </Tab>
-        <Tab key="fflonk-cdk" title="Fflonk (Polygon CDK)">
-          <FflonkProof mockProof={MOCK_FFLONK_PROOF} />
-        </Tab>
         <Tab key="boojum" title="Boojum">
           <BoojumProof />
-        </Tab>
+        </Tab> */}
       </Tabs>
     </div>
   );
